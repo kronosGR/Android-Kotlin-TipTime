@@ -3,6 +3,7 @@ package com.example.tiptime
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.tiptime.databinding.ActivityMainBinding
+import com.google.android.material.textfield.TextInputEditText
 import java.text.NumberFormat
 
 class MainActivity : AppCompatActivity() {
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun calculateTip() {
-        val stringInTextField = binding.costOfService.text.toString()
+        val stringInTextField = binding.costOfServiceEditText.text.toString()
         val cost = stringInTextField.toDoubleOrNull()
         if (cost == null) {
             binding.tipResul.text = ""
